@@ -136,7 +136,7 @@ fun RegisterScreen(onNavigateToLogin: () -> Unit) {
 
             // Tombol Daftar
             Button(
-                onClick = { /* TODO: aksi daftar */ },
+                onClick = { onNavigateToLogin() }, 
                 colors = ButtonDefaults.buttonColors(containerColor = Pink80),
                 shape = RoundedCornerShape(10.dp),
                 modifier = Modifier.fillMaxWidth().height(48.dp)
