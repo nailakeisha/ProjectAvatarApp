@@ -13,6 +13,7 @@ import com.example.avatarapp.ui.theme.AvatarAppTheme
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.avatarapp.ui.screen.AvatarScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +24,7 @@ class MainActivity : ComponentActivity() {
 
                 NavHost(
                     navController = navController,
-                    startDestination = "login" // Kita mulai dari login atau register sesuai keinginan
+                    startDestination = "register" // Kita mulai dari login atau register sesuai keinginan
                 ) {
                     // 1. Rute Register
                     composable("register") {
@@ -49,7 +50,13 @@ class MainActivity : ComponentActivity() {
 
                     // 3. Rute Profile
                     composable("profile") {
-                        ProfileScreen()
+                        ProfileScreen(
+                            onNavigateToAvatar = { navController.navigate("avatar")}
+                        )
+                    }
+
+                    composable("avatar") {
+                        AvatarScreen()
                     }
                 }
             }
