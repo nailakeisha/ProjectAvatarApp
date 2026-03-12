@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.avatarapp"
+    namespace = "com.example.test"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.avatarapp"
+        applicationId = "com.example.test"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -40,10 +40,6 @@ android {
 }
 
 dependencies {
-    implementation("androidx.compose.material:material-icons-extended:1.6.0")
-    dependencies {
-        implementation("androidx.navigation:navigation-compose:2.7.7")
-    }
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -59,4 +55,6 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+    implementation("io.coil-kt:coil-compose:2.5.0")
+    implementation("androidx.compose.material:material-icons-extended")
 }
