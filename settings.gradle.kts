@@ -22,6 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TEST"
+rootProject.name = "AvatarApp"
 include(":app")
- 
